@@ -13,6 +13,10 @@ public class Tape {
     
     Cell head;
     Cell current;
+    /**
+     * Constructor to start a tape with one cell filled with a space char
+     * without this space char the machine breaks
+     */
     public Tape(){
         head = new Cell();
         head.prev = new Cell();
@@ -20,6 +24,10 @@ public class Tape {
         head.prev.next = head;
         current = head.prev;
     }
+    /**
+     * getter fn to the get current cell
+     * @return the current cell
+     */
     public Cell getCurrentCell(){
         
         return current;
